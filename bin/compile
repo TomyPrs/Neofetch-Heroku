@@ -1,0 +1,16 @@
+  #!/bin/sh
+
+echo "-----> Install neofetch"
+BUILD_DIR=$1
+VENDOR_DIR="vendor"
+
+cd $BUILD_DIR
+mkdir -p $VENDOR_DIR
+cd $VENDOR_DIR
+DOWNLOAD_URL="https://raw.githubusercontent.com/tomyprs/neofetch/master/neofetch"
+wget $DOWNLOAD_URL -q
+chmod +x neofetch
+PROFILE_PATH="$BUILD_DIR/.profile.d/neofetch.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:${HOME}/vendor"' >> $PROFILE_PATH
+echo "-----> Done."

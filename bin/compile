@@ -7,7 +7,7 @@ VENDOR_DIR="vendor"
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-DOWNLOAD_URL="https://raw.githubusercontent.com/tomyprs/neofetch/master/neofetch"
+DOWNLOAD_URL="https://github.com/dylanaraps/neofetch/blame/master/neofetch"
 wget $DOWNLOAD_URL -q
 chmod +x neofetch
 PROFILE_PATH="$BUILD_DIR/.profile.d/neofetch.sh"
